@@ -1,0 +1,113 @@
+:root {
+  --primary: #f8b400;
+  --secondary: #fff8f0;
+  --accent: #222;
+  --text: #333;
+  --radius: 8px;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--secondary);
+  color: var(--text);
+}
+header {
+  background: var(--primary);
+  color: #fff;
+  padding: 1.5rem 0;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 2rem;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  padding: 1rem 0;
+}
+nav a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+nav a.active, nav a:hover {
+  color: var(--accent);
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 2px;
+}
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  min-height: 400px;
+}
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.service-card {
+  background: var(--secondary);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 1.5rem;
+  width: 220px;
+  text-align: center;
+}
+.service-card h3 {
+  margin-top: 0;
+  color: var(--primary);
+}
+form label {
+  display: block;
+  margin: 1rem 0 0.3rem 0;
+  font-weight: 500;
+}
+form input, form textarea, form select {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+form button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: var(--radius);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+form button:hover {
+  background: var(--accent);
+}
+.success {
+  color: green;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+footer {
+  background: var(--accent);
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  letter-spacing: 1px;
+}
+@media (max-width: 700px) {
+  main { padding: 1rem; }
+  .services { flex-direction: column; align-items: center; }
+}
